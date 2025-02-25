@@ -11,7 +11,46 @@
         font-family: "Poppins", sans-serif;
     }
 }
-
+/* Style de la carte */
+.card {
+    width: 300px; /* Largeur de la carte */
+    background-color: #fff; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    overflow: hidden; /* Pour masquer les éléments qui débordent */
+    margin: 20px; /* Espacement autour de la carte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour effet au survol */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+  }
+  
+  /* Image à l'intérieur de la carte */
+  .card img {
+    width: 100%; /* L'image occupe toute la largeur de la carte */
+    height: 200px; /* Hauteur fixe pour l'image */
+    object-fit: cover; /* L'image couvre l'espace sans déformation */
+  }
+  
+  /* Contenu de la carte */
+  .card-content {
+    padding: 15px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .card-title {
+    font-size: 1.2em; /* Taille du titre */
+    font-weight: bold; /* Titre en gras */
+    margin-bottom: 10px; /* Espacement sous le titre */
+  }
+  
+  .card-description {
+    font-size: 1em; /* Taille du texte */
+    color: #555; /* Couleur de texte plus claire */
+  }
+  
 @layer components {
     input[type="text"],
     input[type="email"],

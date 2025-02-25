@@ -9,7 +9,7 @@
 <body class="bg-slate-100 text-slate-900">
     <header class="bg-slate-800 shadow-lg">
         <nav>
-            <a href="{{route('home')}}" class="nav-link">Home</a>
+            <a href="{{route("home")}}" class="nav-link">Home</a>
        
             <div class="nav-link">
                 <form action="{{route("logout")}}" method="post">
@@ -17,8 +17,6 @@
                    <button class="btn">Logout</button>
                 </form> 
                 
-
-            </button>
             </div>
      
             
@@ -29,7 +27,13 @@
                
             </div>
         @endguest
+        @auth
+        <div class="flex items-center gap-4">
+            <a href="{{route('cars')}}" class="nav-link">Cars</a>
             
+           
+        </div>
+        @endauth   
         
         </nav>    
     </header>    
